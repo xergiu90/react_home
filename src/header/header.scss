@@ -1,0 +1,153 @@
+@import "~bootstrap/scss/mixins/breakpoints";
+
+$grid-breakpoints: (
+        xs: 400px,
+        sm: 600px,
+        md: 768px,
+        lg: 1170px
+);
+
+
+@include media-breakpoint-down(sm) {
+  .navbar-dark {
+    background-color: #162840;
+  }
+
+  .btn-white {
+    color: white;
+  }
+
+  .btn {
+    max-width: 200px;
+    margin-bottom: 20px;
+  }
+
+  .offset {
+    height: 85px;
+    width: 1px;
+  }
+
+  .logo {
+    height: 80px;
+    width: 160px;
+  }
+
+  .navbar-collapse {
+    position: absolute;
+    top: 83px;
+    right: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    width: 100%;
+    transition: all 0.3s ease;
+    display: block;
+  }
+
+  .navbar-collapse.collapsing {
+    height: auto !important;
+    margin-right: 50%;
+    transition: all 0.3s ease;
+    display: block;
+  }
+
+  .navbar-collapse.show {
+    right: 0;
+  }
+
+  .navbar-brand {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    top: 5px;
+  }
+
+  .menu-text {
+    position: absolute;
+    left: 80px;
+    color: white;
+    z-index: 10;
+  }
+
+  .header-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .fixed-top{
+    position: initial;
+    padding: 0;
+    width: 100%;
+  }
+
+  .logo {
+    height: 112px;
+    width: 200px;
+    margin-top: -5px;
+  }
+
+  .btn {
+    max-width: 170px;
+    margin-left: 10px;
+  }
+
+  .nav-links {
+    margin-top: 20px;
+    font-size: 18px;
+
+    &> .nav-item {
+      color: white;
+
+      &:not(:first-child){
+        display: list-item;
+        list-style-type: disc;
+        list-style-position: outside;
+        margin-left: 50px;
+      }
+    }
+  }
+  .row > .btn:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  .right-nav-section {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding-top: 10px;
+
+    &>* {
+      display: flex;
+      width: 100%;
+      justify-content: flex-end;
+    }
+  }
+
+  .header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+}
+
+
+
+

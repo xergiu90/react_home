@@ -1,0 +1,306 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins/breakpoints";
+
+$grid-columns: 24;
+$grid-breakpoints: (
+        xs: 400,
+        sm: 600px,
+        md: 768px,
+        lg: 1170px
+);
+
+$container-max-widths: (
+        xs: 400,
+        sm: 600px,
+        md: 768px,
+        lg: 1170px
+);
+
+
+@include media-breakpoint-down(sm) {
+  .main-container {
+    background-color: #005EA1;
+    margin-top: 100px;
+
+    .card {
+      border: 2px solid lightgray;
+      text-align: center;
+      padding: 13px;
+
+      .card-title {
+        font-weight: bold;
+        font-size: 20px;
+        text-transform: uppercase;
+        margin-bottom: 0;
+      }
+
+      .card-body {
+        font-weight: 500;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 33px;
+        font-size: 16px;
+
+        span {
+          margin-bottom: 30px;
+        }
+
+        .btn {
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    & > * {
+      padding-top: 20px;
+    }
+
+
+    .section-carousel {
+      .carousel-inner {
+        border-radius: 5px;
+      }
+
+
+      .right-section-carousel {
+        margin-top: 20px;
+      }
+
+      .inner-right {
+        padding: 10px;
+        background-color: white;
+        border-radius: 5px;
+      }
+
+      .card:not(:last-child) {
+        margin-bottom: 10px;
+      }
+
+    }
+
+    .section-cards {
+      .row > div:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+
+    .section-multiple-cards {
+      padding-bottom: 10px;
+
+      .section-title {
+        display: none;
+      }
+
+      .card {
+        .card-title {
+          margin: 0 30%;
+        }
+
+        img {
+          margin-bottom: 20px;
+        }
+      }
+
+      .row > div:not(:last-child) {
+        margin-bottom: 20px;
+      }
+
+      .btn-warning {
+        margin: 20px 0;
+        color: white;
+
+        span {
+          position: absolute;
+          right: 30px;
+        }
+      }
+    }
+
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .main-container {
+    margin-top: -57px;
+    margin-bottom: 70px;
+    font-size: initial;
+
+    .btn {
+      background-color: #166BA7;
+      position: relative;
+
+      span {
+        position: absolute;
+        right: 10px;
+      }
+    }
+
+    .card {
+      border: 2px solid lightgray;
+      text-align: center;
+      padding: 13px;
+
+      .card-title {
+        font-weight: bold;
+        font-size: 18px;
+        text-transform: uppercase;
+        margin-bottom: 0;
+      }
+
+      .card-body {
+        font-weight: 500;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 6px;
+        font-size: 14px;
+
+        span {
+          margin-bottom: 30px;
+        }
+
+        .btn {
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    .section-carousel {
+      background-color: #00347A;
+
+      .container {
+        padding-top: 100px;
+        padding-bottom: 50px;
+
+        & > .row {
+          margin-right: 0;
+        }
+
+        & > .row > .col-lg-8 {
+          padding-left: 0;
+        }
+
+        .carousel-inner {
+          border-radius: 5px;
+
+          img {
+            height: 400px;
+          }
+        }
+
+        .right-section-carousel {
+          background-color: white;
+          border-radius: 5px;
+          justify-content: space-between;
+          display: flex;
+          flex-direction: column;
+
+          .card {
+            &:first-child {
+              margin-top: 15px;
+              margin-bottom: 15px;
+            }
+          }
+        }
+      }
+    }
+
+    .section-cards {
+      padding: 40px 0;
+
+      .card {
+        padding: 35px;
+        background-color: #FFFDFD;
+
+        .card-body {
+          padding: 12px 0;
+
+          span {
+            margin: 20px 17px 40px;
+          }
+        }
+      }
+    }
+
+    .section-multiple-cards {
+      .section-title {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 40px;
+      }
+
+      .card {
+        .card-title {
+          font-size: 16px;
+          padding: 10px;
+        }
+
+        .card-body {
+          padding: 0;
+
+          img {
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+          }
+        }
+      }
+
+      .section-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 40px;
+
+        .btn {
+          background-color: #ED811E;
+          color: white;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .main-container {
+    margin-bottom: 120px;
+
+    .card {
+      .card-title {
+        font-size: 25px;
+      }
+
+      .card-body {
+        padding: 8px 30px;
+        font-size: initial;
+
+      }
+    }
+
+    .section-cards {
+      .card {
+        .card-body {
+          padding: 12px 40px;
+        }
+      }
+    }
+
+    .section-multiple-cards {
+      .card {
+        .card-title {
+          padding: 10px 30px;
+        }
+      }
+    }
+  }
+}
+
+
+// Import Bootstrap and its default variables
+@import '~bootstrap/scss/bootstrap.scss';

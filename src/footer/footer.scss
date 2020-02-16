@@ -1,0 +1,165 @@
+@import "~bootstrap/scss/mixins/breakpoints";
+
+$grid-breakpoints: (
+        xs: 400px,
+        sm: 600px,
+        md: 768px,
+        lg: 1170px
+);
+
+
+@include media-breakpoint-down(sm) {
+  hr {
+    display: none;
+  }
+
+  .btn {
+    text-transform: uppercase;
+  }
+
+  .section-newsletter {
+    color: lightgray;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
+
+    .news-title {
+      padding-bottom: 10px;
+
+      span {
+        font-size: 20px;
+      }
+    }
+
+    .input-name {
+      width: 74%;
+    }
+
+    .button-subscribe {
+      width: 24%;
+      padding-left: 0;
+      margin-top: 1px;
+
+      .btn {
+        font-size: 14px;
+      }
+    }
+
+    .input-group{
+
+      .name {
+        display: none;
+      }
+    }
+
+  }
+
+  .section-info {
+    background-color: #166BA7;
+
+    .info {
+      margin: 35px 0;
+      color: white;
+      font-weight: bold;
+    }
+
+    .band {
+      background-color: #01BBD9;
+      padding: 5px;
+    }
+  }
+
+  .section-links {
+    background-color: #222222;
+    padding: 30px 30px 0;
+    text-align: center;
+
+    .info {
+      padding: 20px 0;
+      border-bottom: 1px solid lightgray;
+      flex: 0 0 33.33333%;
+      max-width: 33.33333%;
+
+      a {
+        color: white;
+        text-decoration: none;
+      }
+    }
+
+    .bullet {
+      color: white;
+      position: relative;
+      right: 39%;
+    }
+  }
+
+  .section-disclaimer {
+    background-color: #222222;
+    margin-top: -2px;
+
+    .info {
+      padding: 35px 0;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+
+
+}
+
+@include media-breakpoint-up(md) {
+  .btn {
+    text-transform: uppercase;
+  }
+
+  .section-newsletter {
+    color: lightgray;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+
+    input {
+      margin-left: 20px;
+      background-color: #F1F1F1;
+    }
+  }
+
+  .section-info {
+    background-color: #166BA7;
+
+    .info {
+      margin: 35px 0;
+      color: white;
+      font-weight: bold;
+    }
+
+    .band {
+      background-color: #01BBD9;
+      padding: 5px;
+    }
+  }
+
+  .section-links {
+    background-color: #222222;
+    padding: 30px;
+
+    a {
+      color: white;
+      text-decoration: none;
+
+    }
+
+    .bullet {
+      display: none;
+    }
+  }
+
+  .section-disclaimer {
+    display: none;
+  }
+}
+
+
