@@ -1,21 +1,7 @@
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins/breakpoints";
-
-$grid-columns: 24;
-$grid-breakpoints: (
-        xs: 400,
-        sm: 600px,
-        md: 768px,
-        lg: 1170px
-);
-
-$container-max-widths: (
-        xs: 400,
-        sm: 600px,
-        md: 768px,
-        lg: 1170px
-);
+@import "./custom-breakpoints";
 
 
 @include media-breakpoint-down(sm) {
@@ -120,11 +106,25 @@ $container-max-widths: (
     }
 
   }
+
+  .section-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+
+    .btn {
+      background-color: #ED811E;
+      border-color: #ED811E;
+      color: white;
+      text-transform: uppercase;
+    }
+  }
 }
 
 @include media-breakpoint-up(md) {
   .main-container {
-    margin-top: -57px;
+    margin-top: -90px;
     margin-bottom: 70px;
     font-size: initial;
 

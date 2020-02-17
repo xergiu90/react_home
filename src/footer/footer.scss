@@ -1,11 +1,5 @@
 @import "~bootstrap/scss/mixins/breakpoints";
-
-$grid-breakpoints: (
-        xs: 400px,
-        sm: 600px,
-        md: 768px,
-        lg: 1170px
-);
+@import "../custom-breakpoints";
 
 
 @include media-breakpoint-down(sm) {
